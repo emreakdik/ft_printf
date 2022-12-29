@@ -64,9 +64,9 @@ Ornek olarak 16lik bir bicimi alalim.
 
 ```c
 if (a >= 16)
-		ret += ft_hex(a / 16, c);
-	if (c == 'X')
-		write(1, &"0123456789ABCDEF"[a % 16], 1);
+	ret += ft_hex(a / 16, c);
+if (c == 'X')
+	write(1, &"0123456789ABCDEF"[a % 16], 1);
 ```
 a degiskeni recursive ile 16'ya bolunerek fonksiyona tekrar gonderiliyor. a degiskeni 16'dan kucuk oldugunda bu dongu duruyor. En kucuk 16 katin mod karsiligini bulup standart ciktiya eklediginde recursive geriye dogru sarmaya (tekrar recursive'in oldugu satira girmeden asagidan devam ediyor) basliyor ve cikti tamamlaniyor.
 
