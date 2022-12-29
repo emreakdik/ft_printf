@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yakdik <yakdik@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 22:19:21 by yakdik            #+#    #+#             */
-/*   Updated: 2022/12/30 00:11:19 by yakdik           ###   ########.fr       */
+/*   Created: 2022/12/12 20:17:55 by yakdik            #+#    #+#             */
+/*   Updated: 2022/12/20 15:45:11 by yakdik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdio.h>
-# include <unistd.h>
-# include <stdbool.h>
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *str, ...);
-int	ft_format(va_list arg, char c);
-int	ft_int(int a);
-int	ft_hex(unsigned int a, char c);
-int	ft_point(unsigned long a, int sign);
-int	ft_string(char *str);
-int	ft_unsigned(unsigned int a);
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
+{
+	size_t	i;
+	size_t	d;
+	size_t	s;
 
-#endif
+	d = ft_strlen(dst);
+	s = ft_strlen((char *)src);
+	i = 0;
+	if (n <= d)
+	{
+		return (n + s);
+	}
+	while (src[i] != '\0' && d + i + 1 < n)
+	{
+		dst[d + i] = src[i];
+		i++;
+	}
+	dst[d + i] = '\0';
+	return (d + s);
+}
