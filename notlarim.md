@@ -3,7 +3,6 @@ Gerekli dönüşümler hakkında kısa açıklamalar:
 • **%s** bir karakter dizisi yazdırır.  
 • **%p** Void * pointer argümanını hexadecimal biçiminde yazdırır. 
 • **%d** 10 tabanında decimal sayı yazdırır.
-
 • **%i** 10 tabanında tam sayı yazdırır.  
 • **%u** 10 tabanında işaretsiz decimal sayı yazdırır.  
 • **%x** hexadecimal sayıyı (16 tabanında) küçük harfler ile yazdırır. 
@@ -40,5 +39,3 @@ C dilinde, bool türü bir değişkenin değerinin true (doğru) veya false (yan
 ```
 
  Not: C dilinde bool türü `stdbool.h` kütüphanesinin bir parçasıdır ve bu kütüphane C dilinde bool türünün kullanımını sağlar.
-
- 
