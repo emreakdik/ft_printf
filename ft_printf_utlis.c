@@ -76,12 +76,3 @@ int	ft_unsigned(unsigned int a)
 	write(1, &"0123456789"[a % 10], 1);
 	return (ret + 1);
 }
-
-// ret + 1 ' ler olmazsa testerdan geçmez, çünkü;
-// fonksiyonumun kendisini yazdırmaya çalıştığımda değerini değiştirir.
-#include <stdio.h>
-
-int	main()
-{
-	printf("\n%d\n", ft_unsigned(10));
-}
